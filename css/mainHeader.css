@@ -1,0 +1,31 @@
+.mainHeader {
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainHeader-title {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: system-ui;
+    font-size: 3rem;
+}
+
+/* .mainHeader-nav {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(28, 102, 102);
+}
+
+.mainHeader-nav ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.mainHeader-nav a {
+    margin: 20px 20px;
+} */
