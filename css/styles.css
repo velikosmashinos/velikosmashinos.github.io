@@ -1,12 +1,68 @@
 @import "mainHeader.css";
-
+@import "vmCopy.css";
+@import "vmLogo.css";
+@import "vmCharacter.css";
 
 :root {
     margin: 0px;
     padding: 0px;
 }
 
+html,
 body {
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200vmax;
+    height: 200vmax;
+    z-index: -1;
+
+    background:
+        radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.15) 100%),
+        conic-gradient(from 0deg at 50% 50%,
+            #f3e5ab 0deg 15deg,
+            #e9d192 15deg 30deg);
+    background-size: cover, 100% 100%;
+
+    background-image:
+        radial-gradient(circle, transparent 40%, rgba(139, 101, 43, 0.2) 100%),
+        repeating-conic-gradient(#f3e5ab 0deg 10deg,
+            #e9d192 10deg 20deg);
+
+    animation: spin 60s linear infinite, moveBackgroundToTop 1s ease-in-out 7s forwards;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes moveBackgroundToTop {
+    0% {
+        top: 50%;
+        left: 50%;
+    }
+
+    100% {
+        top: 10%;
+        left: 50%;
+    }
 }

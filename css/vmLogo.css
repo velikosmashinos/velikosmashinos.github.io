@@ -1,0 +1,31 @@
+.vmLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    width: 95%;
+
+    opacity: 0;
+    z-index: 4;
+    top: 20%;
+    left: 2.5%;
+    animation: fadeInvmLogo 0.2s ease-in-out 8s forwards;
+}
+
+.vmLogo img {
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes fadeInvmLogo {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
